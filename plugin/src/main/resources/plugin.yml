@@ -1,0 +1,27 @@
+name: ItemParser
+description: A small library that parses between strings and item stacks.
+version: 1.0
+author: leduyquang753
+main: cf.leduyquang753.itemparser.plugin.Main
+api-version: 1.14
+commands:
+  parseitem:
+    description: Parse a string into an item and give it to you.
+    usage: /parseitem <the string>
+    aliases: pi
+  reverseparseitem:
+    description: Parse the item you are holding into its string equivalent.
+    usage: /reverseparseitem
+    aliases: rpi
+permissions:
+  itemparser.*:
+    description: Grants all plugin's permissions.
+    default: op
+    children:
+      itemparser.parse: true
+  itemparser.parse:
+    description: Ability to parse a string into an item.
+    default: op
+  itemparser.reverseparse:
+    description: Ability to parse the holding item into its string equivalent.
+    default: op

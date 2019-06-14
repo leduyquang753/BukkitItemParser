@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>itemparser</artifactId>
+    <groupId>cf.leduyquang753</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>itemparserplugin</artifactId>
+  <name>Item parser plugin</name>
+  <description>A simple plugin that makes use of the library.</description>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>spigot-api</artifactId>
+      <version>1.14.2-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>cf.leduyquang753</groupId>
+        <artifactId>itemparserlibrary</artifactId>
+        <version>1.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
